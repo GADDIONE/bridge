@@ -23,10 +23,10 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX
-        Me.LabelX1 = New DevComponents.DotNetBar.LabelX
+        Me.components = New System.ComponentModel.Container()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
         Me.StyleManagerAmbient1 = New DevComponents.DotNetBar.StyleManagerAmbient(Me.components)
         Me.StyleManager1 = New DevComponents.DotNetBar.StyleManager(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()

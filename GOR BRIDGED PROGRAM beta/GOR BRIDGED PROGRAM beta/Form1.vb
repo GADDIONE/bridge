@@ -47,26 +47,28 @@ Public Class Form1
                     If ((reader.Item("count").ToString) > 0) Then
                         Form2.lbl_cashier.Text = reader.Item("first_name").ToString
                         Form2.lbl_userid.Text = reader.Item("gor_no").ToString
-                        reader.Close()
+
                         command2.CommandText = String.Concat(New String() {"insert into tbl_logs(userid,time,type,branch_id,store_id) values('", Me.TextBoxX1.Text, "',NOW(),'LOGIN','", (Module1.branchid), "','", (Module1.storeid), "');"})
                         command2.ExecuteNonQuery()
                         Form2.ShowDialog()
                         Me.Hide()
+                        reader.Close()
                     Else
                         reader.Close()
                         FormAlert.LabelX2.Text = "ERROR: Login Failed."
                         FormAlert.ShowDialog()
                     End If
                 Loop
-                reader.Close()
-                reader.Dispose()
+                ' reader.Close()
             End If
             Module1.mysql_close()
-        Catch exception1 As Exception
 
+
+        Catch exception1 As Exception
+          
             Dim exception As Exception = exception1
             Module1.mysql_close()
-            MessageBox.Show(exception.Message)
+            ' MessageBox.Show(exception.Message)
         Finally
             Module1.mysql_close()
         End Try
